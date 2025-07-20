@@ -3,16 +3,15 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
 const CardComponent = ({ itemData }) => {
-
-  const { image, title, des } = itemData;
+  const { images, title, description } = itemData;
 
   return (
     <div>
       <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src={image} />
+        <Card.Img variant="top" src={images} />
         <Card.Body>
           <Card.Title>{title}</Card.Title>
-          <Card.Text>{des}</Card.Text>
+          <Card.Text>{description}</Card.Text>
           <Button variant="primary">Go somewhere</Button>
         </Card.Body>
       </Card>

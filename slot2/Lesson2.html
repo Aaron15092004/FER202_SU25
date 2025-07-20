@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tìm max và min</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="calculator">
+      <h1>TÌM MAX VÀ TÌM MIN</h1>
+
+      <table class="input-table">
+        <tr>
+          <td>Nhập a:</td>
+          <td><input type="text" id="inputA" /></td>
+        </tr>
+        <tr>
+          <td>Nhập b:</td>
+          <td><input type="text" id="inputB" /></td>
+        </tr>
+        <tr>
+          <td>Nhập c:</td>
+          <td><input type="text" id="inputC" /></td>
+        </tr>
+        <tr>
+          <td>Kết quả:</td>
+          <td><input type="text" id="results" readonly /></td>
+        </tr>
+      </table>
+
+      <div class="radio-button-group">
+        <input type="radio" name="operation" value="max" checked />
+        Tìm số lớn nhất
+
+        <input type="radio" name="operation" value="min" />
+        Tìm số nhỏ nhất
+      </div>
+
+      <div class="button-group">
+        <button onclick="findMaxAndMin()">Tìm</button>
+        <button onclick="clearInputs()">Xóa</button>
+      </div>
+    </div>
+
+    <script>
+      function findMaxAndMin() {
+        const a = parseFloat(document.getElementById("inputA").value);
+        const b = parseFloat(document.getElementById("inputB").value);
+        const c = parseFloat(document.getElementById("inputC").value);
+
+        // Get the selected operation (max or min)
+        const operation = document.querySelector(
+          'input[name="operation"]:checked'
+        ).value;
+
+        let result;
+        if (operation === "max") {
+          result = Math.max(a, b, c);
+        } else {
+          result = Math.min(a, b, c);
+        }
+
+        document.getElementById("results").value = result;
+      }
+
+      function clearInputs() {
+        document.getElementById("inputA").value = "";
+        document.getElementById("inputB").value = "";
+        document.getElementById("inputC").value = "";
+        document.getElementById("results").value = "";
+      }
+    </script>
+  </body>
+</html>

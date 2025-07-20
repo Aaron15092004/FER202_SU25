@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CÁC THAO TÁC VỚI MẠNG</title>
+    <style>
+      .container {
+        width: 400px;
+        border: 1px solid #000;
+        padding: 10px;
+        margin: 20px auto;
+      }
+      h1 {
+        text-align: center;
+        font-size: 16px;
+        margin-top: 0;
+      }
+      .result-area {
+        width: 100%;
+        height: 100px;
+        border: 1px solid #000;
+        resize: none;
+        padding: 5px;
+        box-sizing: border-box;
+      }
+      .row {
+        margin: 10px 0;
+      }
+      .label {
+        display: inline-block;
+        width: 80px;
+        vertical-align: top;
+      }
+      .options {
+        display: inline-block;
+      }
+      .radio-option {
+        display: inline-block;
+        margin-right: 15px;
+      }
+      .radio-row {
+        margin-bottom: 5px;
+      }
+      .buttons {
+        text-align: center;
+        margin-top: 15px;
+      }
+      .buttons button {
+        margin-left: 5px;
+      }
+      .italic {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>CÁC THAO TÁC VỚI MẢNG</h1>
+
+      <table class="result-table">
+        <tr>
+          <td class="label">Kết quả</td>
+          <td><textarea id="result" class="result-area"></textarea></td>
+        </tr>
+      </table>
+
+      <div class="row">
+        <div class="label italic">Chọn</div>
+        <div class="options">
+          <div class="radio-row">
+            <div class="radio-option">
+              <input type="radio" id="nhap-mang" name="operation" checked />
+              <label for="nhap-mang">Nhập mảng</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" id="in-mang" name="operation" />
+              <label for="in-mang">In mảng</label>
+            </div>
+          </div>
+          <div class="radio-row">
+            <div class="radio-option">
+              <input type="radio" id="tong-le" name="operation" />
+              <label for="tong-le">Tổng lẻ</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" id="tich-chan" name="operation" />
+              <label for="tich-chan">Tích chẵn</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" id="sap-xep" name="operation" />
+              <label for="sap-xep">Sắp xếp</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button>Thực hiện</button>
+        <button>Thoát</button>
+      </div>
+    </div>
+  </body>
+</html>

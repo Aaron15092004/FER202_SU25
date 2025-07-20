@@ -1,0 +1,66 @@
+.calculator {
+  width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid blue;
+  border-radius: 5px;
+}
+
+h1 {
+  color: blue;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  margin-bottom: 20px;
+  border-spacing: 0 10px;
+  font-weight: bold;
+}
+
+input[type="text"] {
+  padding: 5px;
+  width: 200px;
+  background-color: #e0f7fa;
+  border: 1px solid #ccc;
+}
+
+.button-group {
+  text-align: center;
+  margin: 20px 0;
+}
+
+button {
+  margin: 0 5px;
+  padding: 8px 15px;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+}
+
+.result {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+#result {
+  width: 200px;
+  padding: 5px;
+  background-color: #f8bbd0;
+  border: 1px solid #ccc;
+}
+
+.radio-button-group {
+  margin: 20px 0;
+  display: flex;
+  justify-content: flex-start;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.radio-button-group input[type="radio"] {
+  margin-right: 8px;
+}

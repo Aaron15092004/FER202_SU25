@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Thực Hiện Phép Toán</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style3.css" />
+  </head>
+  <body>
+    <form class="calculator">
+      <h1>THỰC HIỆN PHÉP TOÁN</h1>
+
+      <table>
+        <tr>
+          <td><label for="inputN">Nhập n</label></td>
+          <td>
+            <input type="text" id="inputN" onchange="calculateResult()"/>
+            <span class="constraint">(1 &lt; n &lt; 100)</span>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="operation">Chọn phép toán</label></td>
+          <td>
+            <select id="operation" onchange="calculateResult()">
+              <option value="sum">Tổng n số liên tiếp</option>
+              <option value="factorial">Tính n!</option>
+              <option value="oddNumbers">In dãy lẻ</option>
+              <option value="evenNumbers">In dãy số chẵn</option>
+              <option value="primeNumbers">Kiểm tra số nguyên tố</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="result">Kết quả</label></td>
+          <td><input type="text" id="result" readonly /></td>
+        </tr>
+      </table>
+    </form>
+
+    <script src="Lesson3.js"></script>
+  </body>
+</html>
